@@ -7,27 +7,25 @@ body {
     background-repeat: no-repeat;
 }
 .container {
-    margin: 6% 0;
+    margin: 3%;
     text-align: center;
 }
 .social {
-    position: fixed;
-    bottom: 2%;
-    right: 2%;
-    margin-top: 6%;
+    margin-top: 20%;
 }
 .social .item {
-    display: block;
-    margin: 10px;
-    padding: 5px 0;
-    border: 1px solid #aaa;
-    border-radius: 15px;
-    width: 100px;
-    color: #ccc;
+    color: #aaa;
     text-decoration: none;
+    transition: all 1s ease;
 }
-#note {
-    margin-top: 30%;
-    color: #ccc;
-    font-size: 0.8em;
+.social .item:hover {
+    color: #666; 
+}
+.social .item:after {
+    content: '/';
+    padding: 0 5px;
+    display: inline-block;
+}
+.social .item:last-child:after {
+    content: '';
 }

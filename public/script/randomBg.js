@@ -3,6 +3,7 @@ var photoList = [
         url:'http://i.imgur.com/Qqm3uRc.jpg?1',
         description: '2014.10.19 青岛·栈桥'
     },
+    /*
     {
         url:'http://i.imgur.com/1wrlIr4.jpg',
         description: '即墨·蓝村'
@@ -72,6 +73,7 @@ var photoList = [
         url:'http://i.imgur.com/7aNMFBh.jpg',
         description: '青岛·中山公园'
     },
+    */
 ];
 
 var body = document.getElementsByTagName('body')[0];
@@ -79,4 +81,3 @@ var note = document.getElementById('note');
 var i = Math.floor(Math.random()*photoList.length);
 body.style.backgroundImage = 'url('+ photoList[i].url + ')';
 note.innerText = photoList[i].description;
-
