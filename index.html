@@ -1,26 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>烂柯人</title>
-    <meta name="author" content="lankeren" />
-    <meta name="description" content="The blog of lankeren" />
-    <link rel="canonical" href="http://lankeren.com/blog/" />
-    <link rel="shortcut icon" href="public/image/favicon.jpg">
-    <link rel="alternate" type="application/rss+xml" title="lankeren" href="http://lankeren.com/blog/atom.xml" />
-    <link rel="stylesheet" href="public/style/base.css">
-    <link rel="stylesheet" href="public/style/index.css">
-</head>
-<body>
-    <div class="container">
-        <nav class="social"> <a class="item" href="http://lankeren.com/blog">Blog</a>
-            <a class="item" href="http://github.com/lankeren">Github</a>
-            <a class="item" href="http://douban.com/people/44454326/">Douban</a>
-            <a class="item" href="http://www.xiachufang.com/cook/101646860/">Xiachufang</a>
-            <a class="item" href="http://music.163.com/#/user/home?id=615278">Music</a>
-        </nav>
-    </div>
-    <script src=""></script>
-</body>
-</html>
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
+

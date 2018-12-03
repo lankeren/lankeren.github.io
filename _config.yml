@@ -1,0 +1,28 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+title:               烂柯人
+tagline:             'Thoughts, stories and ideas.'
+description:         ''
+url:                 http://lankeren.com
+#baseurl:             ''
+paginate:            3
+
+# About/contact
+author:
+  name:              lankeren
+  url:               https://twitter.com/xlankeren
+  #email:            
+
+# Custom vars
+version:             1.0.0
+plugins:             [jekyll-paginate]
+
+collections:
+  git:
+    output: true
+    permalink: /git/:name
