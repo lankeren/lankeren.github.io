@@ -23,6 +23,9 @@ version:             1.0.0
 plugins:             [jekyll-paginate]
 
 collections:
+  algorithm:
+    output: true
+    permalink: /algorithm/:name
   git:
     output: true
     permalink: /git/:name
