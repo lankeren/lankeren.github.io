@@ -36,3 +36,8 @@ title: Home
   {% endif %}
 </div>
 
+{% if jekyll.environment == "production" %}
+<script>
+  amplitude.getInstance().logEvent('Visit homepage');
+</script>
+{% endif %}
