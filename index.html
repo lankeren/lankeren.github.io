@@ -39,5 +39,6 @@ title: Home
 {% if jekyll.environment == "production" %}
 <script>
   amplitude.getInstance().logEvent('Visit homepage');
+  mixpanel.track('Visit homepage');
 </script>
 {% endif %}
